@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>𝗝𝗔𝗗𝗨𝗚𝗥 𝗧𝗢𝗦𝗦 ™🎭</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#000;
+  overflow:auto; /* FIX */
+}
+
+/* HERO */
+.hero{
+  min-height:100vh; /* FIX */
+  padding:20px 15px;
+  background:
+  radial-gradient(circle at top, rgba(255,215,0,0.15), transparent 60%),
+  linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
+  url('back.jpg');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* CARD */
+.card{
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.05);
+  border:1px solid rgba(255,215,0,0.2);
+  border-radius:18px;
+  padding:22px;
+  text-align:center;
+  width:100%;
+  max-width:380px;
+  color:#fff;
+  box-shadow:0 0 30px rgba(255,215,0,0.15);
+}
+
+/* LOGO */
+.logo{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  border:2px solid gold;
+  margin-bottom:12px;
+}
+
+/* TITLE */
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:1.8rem;
+  color:#FFD700;
+}
+
+/* SUBTITLE */
+.subtitle{
+  font-size:0.9rem;
+  color:#ccc;
+  margin-top:6px;
+}
+
+/* COUNTDOWN */
+.counter{
+  margin:14px 0;
+  font-size:1rem;
+}
+
+#countdown{
+  color:#FFD700;
+  font-weight:bold;
+}
+
+/* POINTS */
+.points{
+  margin:12px 0;
+  text-align:left;
+}
+
+.points li{
+  margin:5px 0;
+  font-size:0.85rem;
+  color:#eee;
+  list-style:none;
+}
+
+/* BUTTON */
+.cta-btn{
+  display:block; /* FULL WIDTH */
+  width:100%;
+  margin-top:18px;
+  padding:15px;
+  background:linear-gradient(135deg,#FFD700,#FFD700);
+  color:#000;
+  font-weight:bold;
+  border-radius:40px;
+  text-decoration:none;
+  font-size:15px;
+  letter-spacing:1px;
+  box-shadow:0 0 15px rgba(255,215,0,0.5);
+  transition:0.3s;
+  border: 1px solid white;
+}
+
+/* TAP EFFECT */
+.cta-btn:active{
+  transform:scale(0.95);
+}
+
+/* FOOTER */
+.footer{
+  margin-top:12px;
+  font-size:0.8rem;
+  color:#aaa;
+}
+
+/* DISCLAIMER */
+.disclaimer{
+  margin-top:10px;
+  font-size:10px;
+  color:#888;
+  line-height:1.4;
+}
+
+/* EXTRA SMALL DEVICES */
+@media(max-width:360px){
+  h1{font-size:1.5rem;}
+  .cta-btn{font-size:14px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+
+  <div class="card">
+
+    <img src="logo.jpg" class="logo">
+
+    <h1>𝗝𝗔𝗗𝗨𝗚𝗥 𝗧𝗢𝗦𝗦 ™🎭 🏏</h1>
+    <p class="subtitle">98% Accurate IPL Predictions</p>
+
+    <div class="counter">
+     Free Joining Ends In <span id="countdown">25</span> sec
+    </div>
+
+    <ul class="points">
+      <li> High Accuracy Predictions✅</li>
+      <li> Live Match Updates✅</li>
+      <li> Trusted by 25L+ Users✅</li>
+    </ul>
+
+    <a href="https://t.me/+JNslWjbrqCZjNGU1" class="cta-btn" style="display: flex; place-items: center; place-content: center; gap: 4px;">
+      <img src="telegram.jpg" style="width: 20px ; height: 20px; border-radius: 50%;" alt=""> JOIN FREE TELEGRAM CHANNEL
+    </a>
+
+    <div class="footer">
+      Lifetime Free Access ⚡
+    </div>
+
+    <p class="disclaimer">
+      ⚠️ This platform provides sports analysis only. No gambling or betting promotion. Follow local laws.
+    </p>
+
+  </div>
+
+</div>
+
+<script>
+let sec = 25;
+
+function timer(){
+  document.getElementById("countdown").innerText = sec;
+  sec--;
+  if(sec < 0) sec = 25;
+}
+
+setInterval(timer,1000);
+</script>
+
+</body>
+</html>
